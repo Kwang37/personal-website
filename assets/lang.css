@@ -1,0 +1,18 @@
+/* Bilingual site header + first-visit selector */
+.lang-switch{display:flex;align-items:center;gap:5px;flex:0 0 auto;padding:4px;border:1px solid #d4e2da;border-radius:999px;background:#fff;box-shadow:0 2px 8px #0c27210b}
+.lang-switch button{cursor:pointer;background:transparent;color:#546769;border:0;border-radius:999px;padding:7px 11px;font-size:12px;font-weight:800;white-space:nowrap}
+.lang-switch button[aria-pressed="true"]{color:#fff;background:#17363b}
+.lang-dialog-backdrop{position:fixed;inset:0;z-index:9999;background:rgba(8,27,31,.78);display:grid;place-items:center;padding:20px;backdrop-filter:blur(11px)}
+.lang-dialog{width:min(100%,500px);background:#f7faf6;color:#193439;border-radius:22px;padding:clamp(24px,5vw,42px);box-shadow:0 25px 100px #0005}
+.lang-dialog .hello{font-size:12px;font-weight:850;letter-spacing:2px;color:#55736b;text-transform:uppercase}
+.lang-dialog h2{font-size:clamp(30px,6vw,42px);line-height:1.15;margin:18px 0}
+.lang-dialog p{color:#657a7a;font-size:15px;margin-bottom:25px;line-height:1.75}
+.lang-options{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.lang-options button{background:white;text-align:left;cursor:pointer;border:1px solid #dbe9de;color:#18383b;padding:21px 18px;border-radius:14px;font-weight:850;font-size:17px}
+.lang-options button:hover,.lang-options button:focus-visible{background:#eaf6e9;border-color:#83b593;outline:2px solid #83b593}
+.lang-options button span{font-size:12px;display:block;color:#78908b;font-weight:500;margin-top:5px}
+body.lang-modal-open{overflow:hidden}
+html[lang="zh-CN"] body{font-family:Inter,"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",system-ui,sans-serif}
+@media(max-width:760px){.nav-inner>.lang-switch{margin-left:auto;margin-right:10px}.lang-switch button{padding:7px 8px}.lang-options{grid-template-columns:1fr 1fr}.lang-dialog{border-radius:18px}}
+html[lang="en"] .lang-switch,html[lang="zh-CN"] .lang-switch{line-height:1.2}
+nav .wrap:has(.lang-switch){flex-wrap:wrap}nav .wrap:has(.lang-switch) .navlinks{flex-wrap:wrap}
