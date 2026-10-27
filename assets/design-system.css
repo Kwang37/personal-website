@@ -436,3 +436,112 @@ th{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--meta
   html{scroll-behavior:auto}
   *,*::before,*::after{transition:none!important;animation:none!important;transform:none!important}
 }
+/* Standalone QuotaQuest showcase: match the shared light surfaces, not legacy dark hero. */
+body>nav,body>nav.nav,body>header.nav{
+  background:rgba(251,251,253,.82)!important;
+  -webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px);
+  border-bottom:1px solid var(--line)!important;box-shadow:none;
+  position:sticky;top:0;z-index:100
+}
+body>nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:72px}
+body>nav .logo,body>nav .logo:visited{color:var(--ink)!important}
+body>nav .navlinks a,body>nav .navlinks a:visited{color:#6E6E73;font-weight:500;font-size:14px;text-decoration:none}
+body>nav .navlinks a:hover{color:var(--ink)}
+.hero::before,.hero::after{content:none!important;display:none!important}
+.hero h1 em,.hero h1 span{color:var(--ink)!important;font-style:normal}
+body:has(.demo) section{border-top:0;padding-top:72px;padding-bottom:72px}
+body:has(.demo) .hero{padding:80px 0 68px}
+body:has(.demo) .hero h1{font-size:clamp(40px,5.6vw,67px);letter-spacing:-.03em;line-height:1.08;max-width:800px}
+body:has(.demo) .lede{font-size:17px;line-height:1.65;color:var(--muted)}
+body:has(.demo) .meta{margin-top:22px}
+body:has(.demo) .pill{border:none;background:var(--bg);color:var(--muted);font-weight:500}
+body:has(.demo) .btn.primary{background:#1D1D1F;border-color:#1D1D1F;color:white}
+body:has(.demo) .btn:not(.primary){background:rgba(0,0,0,.06);border:0;color:var(--ink)}
+body:has(.demo) .metric,body:has(.demo) .stat{background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow)}
+body:has(.demo) .metric strong,body:has(.demo) .stat b{color:var(--ink);letter-spacing:-.03em}
+body:has(.demo) .metric small,body:has(.demo) .stat small{color:var(--meta)}
+body:has(.demo) .callout{background:white;color:var(--muted);border:1px solid var(--line);border-left:3px solid var(--brand);border-radius:15px}
+body:has(.demo) .callout strong{color:var(--ink)}
+body:has(.demo) .step .num{color:var(--meta)}
+body:has(.demo) .demo{background:var(--bg)}
+body:has(.demo) .demo-header .notice{background:white;color:var(--muted);border:1px solid var(--line);border-left:3px solid var(--brand);border-radius:12px}
+body:has(.demo) .tabs .tab{background:#F5F5F7;border:1px solid var(--line);color:var(--muted);border-radius:999px;padding:10px 16px}
+body:has(.demo) .tabs .tab[aria-selected="true"]{background:#EAF3ED;color:var(--brand);border-color:rgba(20,108,67,.2);font-weight:600}
+body:has(.demo) .bar{background:#EBECEE}
+body:has(.demo) .bar span{background:#146C43}
+body:has(.demo) .field input,body:has(.demo) .field select,body:has(.demo) td select{
+  background:white;color:var(--ink);border:1px solid #D5D5D9;border-radius:10px;padding:10px 12px}
+body:has(.demo) .result{background:white;color:var(--muted);border:1px solid var(--line);border-radius:14px}
+body:has(.demo) .score{color:var(--ink);font-weight:700;letter-spacing:-.03em}
+body:has(.demo) th{background:#F5F5F7;color:var(--meta)}
+body:has(.demo) td{background:white;color:var(--muted)}
+body:has(.demo) .footer{color:var(--meta);background:transparent;border:none}
+@media(max-width:760px){body>nav .wrap{min-height:65px}body>nav .navlinks{gap:10px}body>nav .navlinks a{font-size:12px}body:has(.demo) section{padding:55px 0}body:has(.demo) .hero{padding:55px 0 48px}}
+
+/* v4 — Information-led refinement. Only interaction and evidence deserve emphasis. */
+.hero{padding-top:72px;padding-bottom:68px}
+.hero .intro{max-width:740px}
+.hero h1{max-width:800px}
+.section .section-note{display:none}
+.project-head{margin-bottom:21px}
+.project-head h3{font-size:24px}
+.project{gap:0}
+.contact{padding:34px 38px}
+.contact h2{margin-bottom:8px}
+/* Case studies are editorial, not a stack of giant cards. */
+.case-top{padding-bottom:24px}
+.case-top .case-index{color:var(--meta);margin-bottom:25px;font-size:13px;letter-spacing:0;text-transform:none}
+.case-top .case-index a{color:var(--brand);font-size:13px;text-decoration:none}
+.case-top .case-meta{display:grid;grid-template-columns:1.5fr 1fr .6fr;gap:17px;margin-top:29px;padding-top:22px;border-top:1px solid var(--line)}
+.case-top .case-meta div{display:block;background:transparent;border:0;border-radius:0;box-shadow:none;padding:0;min-width:0;max-width:none;font-size:13px;color:var(--muted);line-height:1.55}
+.case-top .case-meta b{display:block;margin-bottom:6px;line-height:1.3;font-size:11px;color:var(--meta);font-weight:600;letter-spacing:.055em}
+.case-layout{grid-template-columns:148px minmax(0,1fr);gap:41px;align-items:start;margin-top:19px}
+.case-layout>.toc{padding:10px 0 0;background:transparent;border:0;border-radius:0;box-shadow:none}
+.toc a,.toc a:visited{display:block;color:var(--meta);padding:8px 11px;border-radius:8px;font-weight:500;line-height:1.45;font-size:13px}
+.toc a:hover,.toc a:focus-visible{background:rgba(20,108,67,.055);color:var(--brand)}
+/* Long-form sections: space is the grouping cue. */
+.story-section,.story-section:hover{background:transparent;border:0;border-bottom:1px solid rgba(0,0,0,.075);border-radius:0;box-shadow:none;transform:none;padding:26px 0 47px;margin:0 0 35px}
+.story-section:last-child{border-bottom:0;margin-bottom:0}
+.story-section>h2{font-size:clamp(25px,3.0vw,33px);line-height:1.15;margin-bottom:18px}
+.story-section p{line-height:1.75}
+/* Data, source files and interactive modules keep their subtle surfaces. */
+.story-section .case-card,.story-section .repo-file,.story-section .metric-box,.story-section .demo-box{background:#fff;border:1px solid var(--line);box-shadow:none}
+.story-section .takeaway,.story-section .notice{background:transparent;border:0;border-left:2px solid var(--brand);border-radius:0;box-shadow:none;padding:8px 0 8px 18px}
+.story-section .case-card:hover,.story-section .repo-file:hover{transform:none;box-shadow:none;border-color:var(--line)}
+.case-next{padding:25px 0 27px}
+.next-grid{display:block;padding:0;border:0;background:transparent;box-shadow:none}
+.next-case-link{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:10px;padding:20px 0;border-top:1px solid var(--line);color:var(--brand);text-decoration:none}
+.next-case-label{color:var(--meta);font-size:13px;font-weight:500}
+.next-case-name{font-size:20px;line-height:1.3;color:var(--brand);letter-spacing:-.02em}
+.next-case-link:hover .next-case-name{color:#0F5238}
+.footer-main{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;background:transparent;border:0;border-top:1px solid var(--line);border-radius:0;padding:28px 0;box-shadow:none}
+.footer-main h2,.footer h2{margin:0;font-size:25px;line-height:1.2}
+.footer-main .actions{margin:0}
+.footer{padding-top:5px}
+/* The separate simulator is a tool, not a second case study. */
+body:has(.demo) .hero{padding-top:66px;padding-bottom:25px}
+body:has(.demo) section.demo{padding-top:18px}
+body:has(.demo) .demo-header .eyebrow{display:none}
+body:has(.demo) .demo-header p{margin:8px 0 0}
+/* Preserve explanatory labels only when columns/figures would be ambiguous without them. */
+@media(max-width:980px){
+  .case-layout{grid-template-columns:1fr;gap:20px}
+  .case-layout>.toc{display:flex;flex-wrap:wrap;gap:5px 7px;padding:0 0 15px;border-bottom:1px solid var(--line);position:relative;top:auto}
+  .toc a{padding:7px 11px;background:#fff;border:1px solid var(--line)}
+}
+@media(max-width:760px){
+  .case-top{padding-top:48px;padding-bottom:12px}
+  .case-top .case-meta{grid-template-columns:1fr 1fr;gap:15px}
+  .case-top .case-meta div:first-child{grid-column:1/-1}
+  .story-section{padding:18px 0 34px;margin-bottom:25px}
+  .story-section>h2{font-size:25px}
+  .footer-main{gap:18px;padding:24px 0}
+  .next-case-link{padding:18px 0}
+  .hero{padding-top:55px;padding-bottom:55px}
+  .contact{padding:28px 24px}
+}
+@media(max-width:420px){.toc a{font-size:12px}.case-top .case-meta{grid-template-columns:1fr 1fr}}
+
+/* Compact application tool summary: four metrics on one desktop row. */
+body:has(.demo) .demo-stats{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media(max-width:760px){body:has(.demo) .demo-stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
